@@ -106,7 +106,23 @@ body {
 }
 .slide-content {
   position: relative;
-  max-width: 400px;
+  max-width: 500px;
+}
+.swiper {
+  position: relative;
+}
+.slider-buttons {
+  position: absolute;
+  right: 46px;
+  bottom: 40px;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  width: 100px;
+  justify-content: space-between;
+}
+.slider-button {
+  cursor: pointer;
 }
 .slide-title {
   font-weight: bold;
@@ -141,6 +157,16 @@ body {
 }
 .slide-summer {
   background-image: url("../img/summer.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slide-autumn {
+  background-image: url("../img/autumn.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slide-vitamins {
+  background-image: url("../img/vitamins.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -446,4 +472,105 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 1260px) {
+  .container {
+    max-width: 960px;
+  }
+  .search-form {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .tabs-content {
+    flex-wrap: wrap;
+  }
+  .tabs-card {
+    flex: 50%;
+    max-width: calc(50% - 30px);
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 760px;
+  }
+  .slide {
+    padding: 70px;
+  }
+  .delivery-card {
+    width: calc(50% - 30px);
+  }
+  .footer-logo {
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 560px;
+  }
+  .header {
+    flex-wrap: wrap;
+  }
+  .search-form {
+    order: 5;
+    margin: 15px 0;
+  }
+  .promo {
+    flex-wrap: wrap;
+  }
+  .tabs-content,
+  .advantages-list {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 90%;
+  }
+  .tabs-card {
+    max-width: 100%;
+  }
+  .slide {
+    padding: 50px;
+  }
+  .slide-title {
+    font-size: 30px;
+  }
+  .button {
+    padding: 12px 12px;
+  }
+  .advantages-list {
+    justify-content: center;
+  }
+  .delivery-cards {
+    flex-flow: column;
+    justify-content: center;
+  }
+  .delivery-card {
+    width: 100%;
+  }
+  .footer-logo,
+  .footer-link {
+    margin-right: 0px;
+  }
+  .footer-link:first-child {
+    padding-bottom: 10px;
+  }
+  .social-links {
+    margin-left: 0;
+  }
+  .footer-wrapper {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  .footer-nav {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 20px 0;
+  }
 }
